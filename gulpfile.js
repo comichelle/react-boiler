@@ -10,9 +10,9 @@ const plumber = require('gulp-plumber');
 
 gulp.task('js', () => {
 browserify('src/app.js', {debug: true})
-		.transform('babelify', {
-			sourceMaps: true,
-            presets: ['es2015','react']
+	.transform('babelify', {
+	sourceMaps: true,
+	presets: ['es2015','react']
         })
         .bundle()
         .on('error',notify.onError({
